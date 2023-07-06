@@ -1,0 +1,38 @@
+.form-group {
+  margin: 2rem;
+}
+
+textarea,
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--black);
+}
+
+button[type="submit"] {
+  background: var(--secondary);
+  color: var(--white);
+  border: none;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.75;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 0.5rem;
+}
+.card-form {
+  padding: 2rem;
+  border: 1px solid var(--black);
+  margin: 4rem; /* Add margin-top to create space below the fixed header */
+  height: 600px; /* Adjust the height as needed */
+  overflow-y: auto;
+}
