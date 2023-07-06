@@ -12,7 +12,7 @@
 }
 
 .bookmark--active {
-  color: var(--black);
+  color: orangered;
 }
 
 .bookmark__icon {
