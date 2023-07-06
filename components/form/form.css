@@ -1,5 +1,6 @@
 .form-group {
   margin: 2rem;
+  border-radius: 8px;
 }
 
 textarea,
@@ -8,6 +9,7 @@ input[type="text"] {
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid var(--black);
+  border-radius: 8px;
 }
 
 button[type="submit"] {
@@ -18,16 +20,19 @@ button[type="submit"] {
   margin: 0 auto;
   padding: 1rem;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 button[type="submit"]:hover {
   opacity: 0.75;
+  border-radius: 8px;
 }
 
 label {
   display: block;
   font-weight: bold;
   margin: 0.5rem;
+  border-radius: 8px;
 }
 .card-form {
   padding: 2rem;
@@ -35,4 +40,5 @@ label {
   margin: 4rem; /* Add margin-top to create space below the fixed header */
   height: 600px; /* Adjust the height as needed */
   overflow-y: auto;
+  border-radius: 8px;
 }

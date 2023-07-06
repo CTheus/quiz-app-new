@@ -3,10 +3,12 @@
   padding: 2rem;
   text-align: center;
   position: relative;
+  border-radius: 8px;
 }
 
 .card__question {
   margin: 0 0 2rem;
+  border-radius: 8px;
 }
 
 .card__button-answer {
@@ -16,17 +18,20 @@
   display: block;
   margin: 0 auto 2rem auto;
   padding: 1rem;
+  border-radius: 8px;
 }
 
 .card__button-answer:hover {
   opacity: 0.75;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .card__answer {
   margin: 0 2rem;
   font-style: italic;
   display: none;
+  border-radius: 8px;
 }
 
 .card__answer--active {
@@ -37,6 +42,7 @@
   position: absolute;
   right: 1rem;
   top: -1.5rem;
+  border-radius: 8px;
 }
 
 .card__tag-list {
