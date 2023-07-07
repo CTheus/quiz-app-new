@@ -1,25 +1,17 @@
-// Get the bookmark buttons
-const bookmarkButtons = document.querySelectorAll(".bookmark");
+console.clear();
 
-// Add click event listener to each bookmark button
-bookmarkButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    button.classList.toggle("bookmark--active");
-  });
+// toggle bookmark icon on click
+const bookmark = document.querySelector('[data-js="bookmark"]');
+
+bookmark.addEventListener("click", () => {
+  bookmark.classList.toggle("bookmark--active");
 });
 
-// Get all answer buttons
-const answerButtons = document.querySelectorAll(".card__button-answer");
+// hide and show answer on click
+const answerButton = document.querySelector('[data-js="toggle-answer"]');
+const answer = document.querySelector('[data-js="card-answer"]');
 
-// Add click event listener to each answer button
-answerButtons.forEach((button) => {
-  button.addEventListener("click", toggleAnswer);
+answerButton.addEventListener("click", () => {
+  answer.classList.toggle("card__answer--active");
+  answerButton.classList.toggle("card__button-answer--hide");
 });
-
-function toggleAnswer() {
-  const answer = this.nextElementSibling;
-  answer.classList.toggle("hidden");
-  this.textContent = answer.classList.contains("hidden")
-    ? "Show answer"
-    : "Hide answer";
-}

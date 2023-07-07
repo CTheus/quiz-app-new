@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="index.js" defer></script>
   </head>
-  <body>
+
+  <body data-js="profile__body">
     <header class="header">
       <h1 class="header__title">Profile</h1>
     </header>
     <main class="profile">
-      <div class="profile__card">
+      <section class="profile__card">
         <img
           class="profile__card-img"
           src="https://source.unsplash.com/random/300x300?portrait"
@@ -21,58 +23,65 @@
           width="200"
         />
         <h2 class="profile-card__name">Max Doe</h2>
-      </div>
-      <h3>About me</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
-        dignissimos, reprehenderit quam facilis animi in distinctio nemo est
-        culpa velit non unde expedita porro. Expedita animi quo voluptates
-        blanditiis libero?
-      </p>
-      <ul class="counter-list">
-        <li class="counter-list__item">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            width="24"
-            viewbox="0 0 48 48"
+      </section>
+      <section class="profile__about">
+        <h3>About me</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
+          dignissimos, reprehenderit quam facilis animi in distinctio nemo est
+          culpa velit non unde expedita porro. Expedita animi quo voluptates
+          blanditiis libero?
+        </p>
+        <ul class="counter-list">
+          <li class="counter-list__item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              width="24"
+              viewbox="0 0 48 48"
+            >
+              <path
+                d="M21.55 31.5q.05-3.6.825-5.25.775-1.65 2.925-3.6 2.1-1.9 3.225-3.525t1.125-3.475q0-2.25-1.5-3.75t-4.2-1.5q-2.6 0-4 1.475T17.9 14.95l-4.2-1.85q1.1-2.95 3.725-5.025T23.95 6q5 0 7.7 2.775t2.7 6.675q0 2.4-1.025 4.35-1.025 1.95-3.275 4.1-2.45 2.35-2.95 3.6t-.55 4Zm2.4 12.5q-1.45 0-2.475-1.025Q20.45 41.95 20.45 40.5q0-1.45 1.025-2.475Q22.5 37 23.95 37q1.45 0 2.475 1.025Q27.45 39.05 27.45 40.5q0 1.45-1.025 2.475Q25.4 44 23.95 44Z"
+              />
+            </svg>
+            <span>12</span>
+          </li>
+          <li class="counter-list__item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewbox="0 0 24 24"
+              width="24px"
+              fill="#000000"
+            >
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
+            </svg>
+            <span>4</span>
+          </li>
+        </ul>
+      </section>
+      <section class="profile__settings">
+        <h2 id="profile__settings__title">Settings</h2>
+        <form class="profile__settings__theme" aria-labelledby="title">
+          <input
+            type="checkbox"
+            id="switch-darkmode"
+            class="profile__settings__theme-darkmode-input"
+            data-js="toggle-darkmode"
+          />
+          <label
+            for="switch-darkmode"
+            class="profile__settings__theme-darkmode-label"
+            >Toggle Darkmode</label
           >
-            <path
-              d="M21.55 31.5q.05-3.6.825-5.25.775-1.65 2.925-3.6 2.1-1.9 3.225-3.525t1.125-3.475q0-2.25-1.5-3.75t-4.2-1.5q-2.6 0-4 1.475T17.9 14.95l-4.2-1.85q1.1-2.95 3.725-5.025T23.95 6q5 0 7.7 2.775t2.7 6.675q0 2.4-1.025 4.35-1.025 1.95-3.275 4.1-2.45 2.35-2.95 3.6t-.55 4Zm2.4 12.5q-1.45 0-2.475-1.025Q20.45 41.95 20.45 40.5q0-1.45 1.025-2.475Q22.5 37 23.95 37q1.45 0 2.475 1.025Q27.45 39.05 27.45 40.5q0 1.45-1.025 2.475Q25.4 44 23.95 44Z"
-            />
-          </svg>
-          <span>12</span>
-        </li>
-        <li class="counter-list__item">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewbox="0 0 24 24"
-            width="24px"
-            fill="#000000"
-          >
-            <path d="M0 0h24v24H0V0z" fill="none" />
-            <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
-          </svg>
-          <span>4</span>
-        </li>
-      </ul>
-      <h2 id="title">Settings</h2>
-      <form class="profile__settings" aria-labelledby="title">
-        <input
-          type="checkbox"
-          id="switch-darkmode"
-          class="profile__settings-darkmode-input"
-        />
-        <label for="switch-darkmode" class="profile__settings-darkmode-label"
-          >Toggle Darkmode</label
-        >
-      </form>
+        </form>
+      </section>
     </main>
 
     <nav class="navigation">
       <ul class="navigation__list">
-        <li class="navigation__list-item navigation__list-item--active">
+        <li class="navigation__list-item">
           <a
             class="navigation__link"
             href="/index.html"
@@ -110,27 +119,28 @@
         </li>
         <li class="navigation__list-item">
           <a
-            class="navigation__link"
+            class="navigation__link navigation__link--form"
             href="/form.html"
-            aria-label="go to form page"
-            ><svg
+            aria-label="go to add card page"
+          >
+            <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-card-text"
-              viewBox="0 0 16 16"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             >
-              <path
-                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"
-              />
-              <path
-                d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"
-              />
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item">
+        <li class="navigation__list-item navigation__list-item--active">
           <a
             class="navigation__link"
             href="/profile.html"

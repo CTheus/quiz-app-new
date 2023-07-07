@@ -5,7 +5,6 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
 }
 
 .navigation__list {
@@ -20,8 +19,13 @@
   justify-content: center;
 }
 
-.navigation__list-item--active {
-  background-color: var(--secondary-light);
+.navigation__list-item:hover {
+  background: var(--secondary-light);
+}
+
+.navigation__list-item--active,
+.navigation__list-item--active:hover {
+  background-color: var(--secondary);
 }
 
 .navigation__list-item:not(:first-child) {
@@ -37,4 +41,9 @@
 
 .navigation__link svg {
   fill: currentcolor;
+}
+
+.navigation__link--form svg {
+  fill: none;
+  stroke: currentcolor;
 }

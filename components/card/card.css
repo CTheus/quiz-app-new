@@ -1,37 +1,46 @@
 .card {
-  border: 1px solid var(--black);
+  /* border: 1px solid var(--black); */
+  background: var(--secondary-light);
   padding: 2rem;
   text-align: center;
   position: relative;
-  border-radius: 8px;
 }
 
 .card__question {
   margin: 0 0 2rem;
-  border-radius: 8px;
 }
 
 .card__button-answer {
+  cursor: pointer;
   background: var(--secondary);
   color: var(--white);
   border: none;
   display: block;
   margin: 0 auto 2rem auto;
   padding: 1rem;
-  border-radius: 8px;
+  width: 150px;
+  text-align: center;
+
+  transition: 300ms ease;
+}
+
+.card__button-answer::before {
+  content: "Show answer";
+}
+
+.card__button-answer--hide::before {
+  content: "Hide answer";
 }
 
 .card__button-answer:hover {
-  opacity: 0.75;
   cursor: pointer;
-  border-radius: 8px;
+  background: var(--black);
 }
 
 .card__answer {
   margin: 0 2rem;
   font-style: italic;
   display: none;
-  border-radius: 8px;
 }
 
 .card__answer--active {
@@ -42,7 +51,6 @@
   position: absolute;
   right: 1rem;
   top: -1.5rem;
-  border-radius: 8px;
 }
 
 .card__tag-list {
@@ -57,7 +65,4 @@
   color: var(--white);
   border-radius: 4px;
   padding: 0 5px;
-}
-.card__answer {
-  display: none;
 }
