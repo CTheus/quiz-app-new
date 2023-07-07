@@ -1,7 +1,7 @@
 :root {
   --primary: #ffffff;
-  --secondary: #ff4a11;
-  --secondary-light: #fddcd2;
+  --secondary: #19a7ce;
+  --secondary-light: #c9e6f3;
   --white: #ffffff;
   --black: #252629;
   --ff-primary: sans-serif;
@@ -63,8 +63,4 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-.hidden {
-  display: none;
 }

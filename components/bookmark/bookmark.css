@@ -1,18 +1,22 @@
 .bookmark {
+  cursor: pointer;
   border: none;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: var(--secondary);
+  background: var(--secondary-light);
   color: var(--white);
+
+  transition: 300ms ease;
 }
 
-.bookmark:hover {
-  cursor: pointer;
+.bookmark:hover .bookmark__icon,
+.bookmark:active .bookmark__icon {
+  color: var(--black);
 }
 
 .bookmark--active {
-  color: orangered;
+  color: var(--black);
 }
 
 .bookmark__icon {

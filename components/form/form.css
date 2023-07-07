@@ -1,38 +1,57 @@
-.form-group {
-  margin: 2rem;
+.add-card {
+  padding: 10rem 2rem 4rem 2rem;
+  max-width: 45rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-textarea,
-input[type="text"] {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid var(--black);
+.add-card__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-button[type="submit"] {
+.add-card__container :where(input, textarea) {
+  min-height: 4rem;
+  border: 2px solid;
+  padding: 1rem;
+
+  transition: 300ms ease;
+}
+
+.add-card__container :where(input, textarea):hover {
+  border-color: var(--secondary);
+}
+
+.add-card__container :where(input, textarea):focus {
+  background: var(--secondary-light);
+  outline: var(--secondary);
+}
+
+.add-card__counter {
+  align-self: flex-end;
+}
+
+.add-card__submit-button {
+  cursor: pointer;
   background: var(--secondary);
   color: var(--white);
   border: none;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   padding: 1rem;
-  cursor: pointer;
+  width: 150px;
+  text-align: center;
+
+  transition: 300ms ease;
 }
 
-button[type="submit"]:hover {
-  opacity: 0.75;
+.add-card__submit-button:hover {
+  background: var(--black);
 }
 
-label {
-  display: block;
-  font-weight: bold;
-  margin: 0.5rem;
-}
-.card-form {
-  padding: 2rem;
-  border: 1px solid var(--black);
-  margin: 4rem; /* Add margin-top to create space below the fixed header */
-  height: 600px; /* Adjust the height as needed */
-  overflow-y: auto;
+.add-card + .card-list {
+  padding: 4rem 2rem;
 }
